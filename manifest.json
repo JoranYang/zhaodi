@@ -1,0 +1,198 @@
+{
+    "name" : "兆弟集团",
+    "appid" : "__UNI__ECB4960",
+    "description" : "",
+    "versionName" : "4.0.0",
+    "versionCode" : 400,
+    "transformPx" : false,
+    /* 5+App特有相关 */
+    "app-plus" : {
+        "compatible" : {
+            "ignoreVersion" : true
+        },
+        "usingComponents" : true,
+        "nvueCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : false,
+            "autoclose" : false,
+            "delay" : 0
+        },
+        "privacy" : {
+            "prompt" : "template", //可取值template、custom、none
+            "template" : {
+                "title" : "服务协议和隐私政策",
+                "message" : "　　请你务必审慎阅读、充分理解“服务协议”和“隐私政策”各条款，包括但不限于：为了更好的向你提供服务，我们需要收集你的设备标识、操作日志等信息用于分析、优化应用性能。<br/>　　你可阅读<a href=\"https://zhaodigroup.cn/admin/api/agreement/user\">《服务协议》</a>和<a href=\"https://zhaodigroup.cn/admin/api/agreement/privacy\">《隐私政策》</a>了解详细信息。如果你同意，请点击下面按钮开始接受我们的服务。",
+                "buttonAccept" : "我知道了",
+                "buttonRefuse" : "暂不同意"
+            }
+        },
+        /* 应用发布信息 */
+        "distribute" : {
+            /* android打包配置 */
+            "android" : {
+                "packagename" : "com.zhaodigroup",
+                "keystore" : "test.keystore",
+                "password" : "zhaodi@2020",
+                "aliasname" : "testalias",
+                "schemes" : [ "zhaodigroup" ],
+                "permissions" : [
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_MOCK_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_PRINT_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.BIND_VPN_SERVICE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.CAPTURE_SECURE_VIDEO_OUTPUT\"/>",
+                    "<uses-permission android:name=\"android.permission.CAPTURE_VIDEO_OUTPUT\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_MULTICAST_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CLEAR_APP_CACHE\"/>",
+                    "<uses-permission android:name=\"android.permission.CLEAR_APP_USER_DATA\"/>",
+                    "<uses-permission android:name=\"android.permission.CONTROL_LOCATION_UPDATES\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.HARDWARE_TEST\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_FORMAT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_INPUT_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.SET_ACTIVITY_WATCHER\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>"
+                ],
+                "abiFilters" : [ "armeabi-v7a", "arm64-v8a", "x86" ],
+                "autoSdkPermissions" : true
+            },
+            /* ios打包配置 */
+            "ios" : {
+                "idfa" : false
+            },
+            /* SDK配置 */
+            "sdkConfigs" : {
+                "ad" : {},
+                "push" : {
+                    "unipush" : {}
+                },
+                "share" : {
+                    "sina" : {
+                        "appkey" : "",
+                        "redirect_uri" : "",
+                        "UniversalLinks" : ""
+                    }
+                },
+                "payment" : {},
+                "speech" : {
+                    "ifly" : {}
+                }
+            },
+            "splashscreen" : {
+                "androidStyle" : "common",
+                "android" : {
+                    "xxhdpi" : "F:/app_icon/app_1080_1882.9.png",
+                    "xhdpi" : "F:/app_icon/app_720_1242.9.png",
+                    "hdpi" : "F:/app_icon/app_480_762.9.png"
+                },
+                "iosStyle" : "common",
+                "useOriginalMsgbox" : true
+            },
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            }
+        },
+        "nativePlugins" : {
+            "Fvv-AutoStart" : {
+                "__plugin_info__" : {
+                    "name" : "安卓开机自启动 Fvv-AutoStart",
+                    "description" : "uni-app 安卓开机自启动插件，不保证所有机型和系统都有效",
+                    "platforms" : "Android",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=1820",
+                    "android_package_name" : "",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "1820",
+                    "parameters" : {}
+                }
+            }
+        },
+        "modules" : {
+            "VideoPlayer" : {},
+            "Push" : {}
+        }
+    },
+    /* 快应用特有相关 */
+    "quickapp" : {},
+    /* 小程序特有相关 */
+    "mp-weixin" : {
+        "appid" : "wx4f65748fa509ef8d",
+        "setting" : {
+            "urlCheck" : false,
+            "minified" : false,
+            "es6" : true,
+            "postcss" : false
+        },
+        "usingComponents" : true
+    },
+    "mp-alipay" : {
+        "usingComponents" : true
+    },
+    "mp-baidu" : {
+        "usingComponents" : true
+    },
+    "mp-toutiao" : {
+        "usingComponents" : true
+    },
+    "uniStatistics" : {
+        "enable" : false
+    },
+    "h5" : {
+        "devServer" : {
+            "https" : false,
+            "port" : 8024
+        },
+        "domain" : "zhaodigroup.cn",
+        "router" : {
+            "base" : "/app",
+            "mode" : "hash"
+        },
+        "publicPath" : "https://zhaodigroup.cn/app"
+    }
+}
