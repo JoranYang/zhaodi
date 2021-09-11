@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://D:/前端上课/JsPhase5/lqy_mimiapp/miniprogram/.idea/miniprogram.iml" filepath="D:/前端上课/JsPhase5/lqy_mimiapp/miniprogram/.idea/miniprogram.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/train.iml" filepath="$PROJECT_DIR$/.idea/train.iml" />
+      <module fileurl="file://D:/前端上课/uniapp_learn/wangyi_uniapp/.idea/wangyi_uniapp.iml" filepath="D:/前端上课/uniapp_learn/wangyi_uniapp/.idea/wangyi_uniapp.iml" />
+    </modules>
+  </component>
+</project>

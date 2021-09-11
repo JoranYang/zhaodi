@@ -1,0 +1,5 @@
+manifest.json
+unpackage/
+node_modules/
+.hbuilderx/
+package-lock.json

@@ -1,0 +1,335 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// #ifdef APP-PLUS
+		{
+			"path": "pages/login/splash",
+			"style": {
+				"navigationStyle": "custom" //取消导航栏名称
+			}
+		},
+		// #endif 
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle": "white"
+			}
+
+		}, {
+			"path": "pages/index/my",
+			"style": {
+				"navigationStyle": "custom" //取消导航栏名称
+			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationStyle": "custom", //取消导航栏名称
+				"navigationBarTextStyle": "black"
+			}
+		},
+		//#ifdef APP-PLUS || H5
+		{
+			"path": "pages/px/news/index",
+			"style": {
+				"navigationBarTitleText": "新闻"
+			}
+		}, {
+			"path": "pages/px/my/index",
+			"style": {
+				"navigationStyle": "custom", //取消导航栏名称
+				"navigationBarTitleText": "我的"
+			}
+		}, {
+			"path": "pages/px/train/index",
+			"style": {
+				"navigationBarTitleText": "培训"
+			}
+		},
+		{
+			"path": "pages/px/train/detail",
+			"style": {
+				"navigationBarTitleText": "学习"
+			}
+		}, {
+			"path": "pages/px/community/index",
+			"style": {
+				"navigationStyle": "custom", // 隐藏系统导航栏
+				"navigationBarTextStyle": "white" // 状态栏字体为白色，只能为 white-白色，black-黑色 二选一
+			}
+		}, {
+			"path": "pages/px/community/detail",
+			"style": {}
+		}, {
+			"path": "pages/px/community/tw",
+			"style": {}
+		}, {
+			"path": "pages/px/community/userList",
+			"style": {}
+		}, {
+			"path": "pages/px/my/sc",
+			"style": {}
+		}, {
+			"path": "pages/px/my/gx",
+			"style": {}
+		}, {
+			"path": "pages/px/my/tw",
+			"style": {
+				"navigationBarTitleText": "内容详情"
+			}
+		}, {
+			"path": "pages/px/train/info",
+			"style": {
+				"navigationBarTitleText": "培训学习列表"
+			}
+		},
+		// #endif
+		{
+			"path": "pages/px/train/exam",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}, {
+			"path": "pages/px/news/info",
+			"style": {}
+		}, {
+			"path": "pages/kh/product/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}, {
+			"path": "pages/kh/project/index",
+			"style": {
+				"navigationBarTitleText": "项目列表",
+				"enablePullDownRefresh": true
+			}
+		}, {
+			"path": "pages/kh/reconciliation/index",
+			"style": {
+				"navigationBarTitleText": "对账"
+			}
+		}, {
+			"path": "pages/kh/my/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom" //取消导航栏名称
+			}
+		}, {
+			"path": "pages/kh/my/edit",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			}
+		}, {
+			"path": "pages/kh/goods/index",
+			"style": {
+				"navigationBarTitleText": "我的货物"
+			}
+		}, {
+			"path": "pages/kh/project/edit",
+			"style": {
+				"navigationBarTitleText": "项目详请"
+			}
+		}, {
+			"path": "pages/kh/project/apply",
+			"style": {
+				"navigationStyle": "custom" // 隐藏系统导航栏
+			}
+		}, {
+			"path": "pages/kh/goods/info",
+			"style": {
+				"navigationBarTitleText": "发货申请详请"
+			}
+		}, {
+			"path": "pages/kh/goods/logistics",
+			"style": {
+				"navigationBarTitleText": "货运列表"
+			}
+		}, {
+			"path": "pages/kh/my/info",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+							"color": "#FFFFFF",
+							"colorPressed": "#FFFFFF",
+							"float": "right",
+							"fontSize": "16px",
+							"fontSrc": "/static/font/siyuan.ttf", // 字体文件
+							"text": "保存"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/kh/product/info",
+			"style": {
+				"navigationBarTitleText": "内容详情"
+			}
+		}, {
+			"path": "pages/kh/reconciliation/info",
+			"style": {}
+		}, {
+			"path": "pages/kh/reconciliation/detailInfo",
+			"style": {}
+		}, {
+			"path": "pages/arrive",
+			"style": {
+				"navigationBarTitleText": "发货单",
+				"navigationStyle": "custom" // 隐藏系统导航栏
+			}
+		}, {
+			"path": "pages/kh/reconciliation/retGood",
+			"style": {}
+		}, {
+			"path": "pages/login/agreement",
+			"style": {
+				"navigationBarTitleText": "隐私政策"
+			}
+		}, {
+			"path": "pages/protocol",
+			"style": {}
+		}, {
+			"path": "pages/kh/goods/receipt",
+			"style": {
+				"navigationBarTitleText": "签收单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/kh/goods/afterSale",
+			"style": {
+				"navigationStyle": "custom" // 隐藏系统导航栏
+			}
+		}, {
+			"path": "pages/kh/goods/test",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/kh/goods/revoke",
+			"style": {
+				"navigationBarTitleText": "撤销",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/kh/goods/pile",
+			"style": {
+				"navigationStyle": "custom" // 隐藏系统导航栏
+			}
+
+		}, {
+			"path": "pages/kh/goods/pileInfo",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/kh/goods/screen",
+			"style": {
+				"navigationStyle": "custom", //取消导航栏名称
+				"navigationBarTitleText": "选择时间"
+			}
+		}, {
+			"path": "pages/downLoad",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/kh/about/about",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#F7F9FB"
+			}
+
+		}
+
+		, {
+			"path": "pages/index/query",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/list",
+			"style": {
+				"navigationBarTitleText": "内容列表",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/childCompany",
+			"style": {
+				"navigationBarTitleText": "子公司",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/prize",
+			"style": {
+				"navigationBarTitleText": "重大奖项",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/introduce",
+			"style": {
+				"navigationBarTitleText": "企业介绍",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"tabBar": {
+		// "selectedColor": "#1779FF",
+		// "color": "#bebbcc",
+		// "backgroundColor": "#F7F7F9",
+		// "borderStyle": "white",
+		"list": [{
+				"pagePath": "pages/index/index"
+			},
+			{
+				"pagePath": "pages/login/index"
+			},
+			// #ifdef APP-PLUS || H5
+			{
+				"pagePath": "pages/px/news/index"
+			},
+			{
+				"pagePath": "pages/px/my/index"
+			},
+			{
+				"pagePath": "pages/px/train/index"
+			},
+			{
+				"pagePath": "pages/px/community/index"
+			},
+			// #endif
+			{
+				"pagePath": "pages/kh/product/index"
+			},
+			{
+				"pagePath": "pages/kh/project/index"
+			},
+			{
+				"pagePath": "pages/kh/my/index"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "兆弟集团",
+		"navigationBarBackgroundColor": "#1779FF",
+		"backgroundColor": "#F7F9FB"
+	}
+}

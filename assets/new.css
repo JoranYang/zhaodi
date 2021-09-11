@@ -1,0 +1,46 @@
+.vjs-custom-skin>.video-js .vjs-big-play-button {
+	background-color: rgba(0, 0, 0, 0.45);
+	font-size: 3.5em;
+	/*border-radius: 50%;*/
+	height: 2em !important;
+	line-height: 2em !important;
+	margin-top: -1em !important
+}
+.video-js .vjs-mute-control {
+  cursor: pointer;
+  -webkit-box-flex: none;
+  -moz-box-flex: none;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 2em; 
+	background-color: rgba(255,255,255,.5);
+	}
+/* 我改了源码 */
+	
+	.video-js .vjs-control {
+	  position: relative;
+	  text-align: center;
+	  margin: 0;
+	  padding: 0;
+	  height: 100%;
+		/* 我改的 */
+	  width: 4em;
+	  -webkit-box-flex: none;
+	  -moz-box-flex: none;
+	  -webkit-flex: none;
+	  -ms-flex: none;
+	  flex: none; }
+		
+		.vjs-custom-skin>.video-js .vjs-control-bar .vjs-playback-rate {
+			order: 5;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		
+		.vjs-custom-skin>.video-js .vjs-control-bar .vjs-fullscreen-control {
+			order: 6;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+		
