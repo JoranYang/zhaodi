@@ -64,8 +64,8 @@
 					badgeCount: 0
 				}],
 				menu: uni.getStorageSync('menu'),
-				avatar: uni.getStorageSync('avatar'), // 头像
-				lastName: uni.getStorageSync('lastName'), //名字
+				// avatar: uni.getStorageSync('avatar'), // 头像
+				// lastName: uni.getStorageSync('lastName'), //名字
 				trainCredit: uni.getStorageSync('trainCredit'),
 				showUpdateFlag: {
 					flag: false
@@ -73,6 +73,14 @@
 
 				tokenValue: '',
 				updateApp: {}
+			}
+		},
+		computed: {
+			avatar() {
+				return this.$store.state.vuex_avatar
+			},
+			lastName() {
+				return this.$store.state.vuex_name
 			}
 		},
 		onLoad() {
@@ -138,10 +146,9 @@
 			 * @description 清除缓存信息 返回登录页
 			 */
 			loginOut() {
-
 				const value = uni.getStorageSync('token');
-
 				console.log("token:", value);
+				// 这里只清空storage远远不够。还要清除vuex
 				uni.clearStorage()
 				uni.switchTab({
 					url: '../../index/index'

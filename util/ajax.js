@@ -32,6 +32,7 @@ axios.defaults.adapter = function(config) {
 					header: response.header,
 					config: config
 				};
+				console.log('response', response)
 				settle(resolve, reject, response);
 			}
 		})
@@ -96,7 +97,6 @@ instance.interceptors.response.use(
 			})
 		}
 		if (error.response.status === 401) { // 登录超时
-			// debugger
 			const soruce = uni.getStorageSync('soruce')
 			/**
 			 * @description 获取新token

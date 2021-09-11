@@ -119,7 +119,6 @@
 						uni.showLoading({
 							title: '正在登录'
 						})
-						debugger
 						// #ifdef APP-PLUS
 						this.userInfo.cid = plus.push.getClientInfo().clientid
 						// #endif

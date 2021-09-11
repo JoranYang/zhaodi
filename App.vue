@@ -27,6 +27,8 @@
 				}
 			})
 			// #endif 
+			this.$store.commit('SET_NAME', uni.getStorageSync('lastName') || '')
+			this.$store.commit('SET_AVATAR', uni.getStorageSync('avatar') || '')
 		}
 	}
 </script>

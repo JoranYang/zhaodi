@@ -122,21 +122,21 @@
 			/**
 			 * 检查版本更新
 			 */
-			// checkVersion() {
-			// 	const that = this
-			// 	plus.runtime.getProperty(plus.runtime.appid, function(widgetInfo) {
-			// 		that.$common.getVersionDictory({
-			// 			'category': 'app_version',
-			// 			'code': widgetInfo.version.substring(0, 1)
-			// 		}).then(res => {
-			// 			console.log(res)
-			// 			that.updateVersionObject = res.info[0] // 查询数据字典 存在更新内容
-			// 			if (that.updateVersionObject.interpretation != widgetInfo.version && that.updateVersionObject.special2) {
-			// 				that.showUpdateFlag.flag = true
-			// 			}
-			// 		})
-			// 	});
-			// },
+			checkVersion() {
+				const that = this
+				plus.runtime.getProperty(plus.runtime.appid, function(widgetInfo) {
+					that.$common.getVersionDictory({
+						'category': 'app_version',
+						'code': widgetInfo.version.substring(0, 1)
+					}).then(res => {
+						console.log(res)
+						that.updateVersionObject = res.info[0] // 查询数据字典 存在更新内容
+						if (that.updateVersionObject.interpretation != widgetInfo.version && that.updateVersionObject.special2) {
+							that.showUpdateFlag.flag = true
+						}
+					})
+				});
+			},
 
 			/**
 			 * @description 获取新闻列表

@@ -125,7 +125,6 @@ const store = new Vuex.Store({
 		async loginByUsername({
 			commit
 		}, userInfo) {
-			debugger
 			let data = await getKey()
 			var encrypt = new JSEncrypt()
 			encrypt.setPublicKey(data.info.publicKey)

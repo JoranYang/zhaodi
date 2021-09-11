@@ -81,9 +81,14 @@ export default {
   //获取params传递过来的id
   onLoad(option) {
     this.id = option.id;
-    //执行查询 获取id
-    this.listQuery.type = this.id;
-    this.getTrainSingle();
+  },
+  
+  onShow(option) {
+	//执行查询 获取id
+	this.listQuery.type = this.id;
+	this.listQuery.pageNum = 1
+	this.trainInfo = []
+	this.getTrainSingle();
   },
 
   mounted() {
@@ -126,7 +131,7 @@ export default {
      */
     toVideoDetail(item) {
       uni.navigateTo({
-        url: `/pages/px/train/detail?id=${item.id}&amountScore=${item.amountScore}`,
+        url: `/pages/px/train/detail?id=${item.id}&amountScore=${item.amountScore}&isLook=${item.isLook}`,
       });
     },
 

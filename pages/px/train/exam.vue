@@ -334,7 +334,7 @@ export default {
   },
   destroyed() {
     //清除定时器
-    window.clearInterval(this.timer);
+    clearInterval(this.timer);
   },
 };
 </script>

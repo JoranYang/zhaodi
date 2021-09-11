@@ -9,9 +9,9 @@
 		<template >
 		    <view>
 		        <view class="uni-padding-wrap uni-common-mt"  >
-		            <view v-if="srcurl">
-		                <video  id="myVideo" :src="srcurl"  autoplay="true"  show-loading="false" 
-						enable-progress-gesture="false" direction='rate' show-center-play-btn='true' class="video" controls
+		            <view v-if="isShow">
+		                <video  id="myVideo" :src="srcurl"  autoplay show-loading="false" 
+						enable-progress-gesture="false" show-center-play-btn='true' class="video" controls
 						@error="videoErrorCallback" ></video>
 								
 		            </view>
@@ -39,6 +39,8 @@ export default {
 	},
 	data() {
 		return {
+			isShow: false,
+			isLook: false,
 			/**
 			 * 倒计时初始值
 			 */
@@ -65,12 +67,10 @@ export default {
 			 * @param {string} 试卷id
 			 */
 			paperId: '',
-			id: '', //当前课程id
 			detailInfo: [], //当前课程详情
 			imgData: '', //要展示的图片内容
 			videoData: '', //要展示的视频内容
-			srcurl:'',
-			 rate:1
+			srcurl:''
 			
 		};
 	},
@@ -88,9 +88,8 @@ export default {
 		} else {
 			this.amountScore = options.amountScore;
 		}
-		//
 		this.paperId = options.id;
-		console.log(this.paperId)
+		this.isLook = options.isLook;
 		this.getInfo();
 		this.timeId = setInterval(this.studyTime, 10000);
 		
@@ -151,6 +150,7 @@ export default {
 				
 				console.log(this.videoData)
 				this.durationTime = this.trainInfo.trainStudyTime * 60;
+				// this.durationTime = 0.1 * 60;
 				this.times.minuteTime = this.double(Math.floor((this.durationTime / 60) % 60));
 				this.times.secondTime = this.double(Math.floor(this.durationTime % 60));
 
@@ -166,6 +166,9 @@ export default {
 				} else {
 					this.srcurl = this.videoData[0];
 					this.interval = setInterval(this.close, 1000);
+					setTimeout(() => {
+						this.isShow = true
+					}, 300)
 				}
 			});
 		},
@@ -175,7 +178,7 @@ export default {
 		 * @description 监听用户阅读时间 向后台发送日志信息
 		 */
 		studyTime() {
-			userTrainLog({ trainId: this.$route.query.id })
+			userTrainLog({ trainId: this.paperId })
 				.then(response => {
 					return true;
 				})
@@ -188,6 +191,10 @@ export default {
 		/**  视频播放相关  **/
 		// 倒计时结束，更新为已经看完
 		setVideoData() {
+			if (this.isLook === '1') {
+				console.log(this.isLook)
+				return
+			}
 			setVideoData({
 				trainId: this.paperId
 			}).then(res => console.log(res));
@@ -204,11 +211,11 @@ export default {
 
 		/**  视频播放相关 end **/
 	},
-
-	destroyed() {
+	
+	beforeDestroy() {
 		//清除定时器
-		window.clearInterval(this.interval);
-		window.clearInterval(this.timeId);
+		clearInterval(this.interval);
+		clearInterval(this.timeId);
 	}
 };
 </script>
