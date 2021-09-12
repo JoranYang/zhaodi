@@ -100,9 +100,10 @@
 					header:{
 						'X-Token':this.tokenValue
 					},
-					success(res) {
+					success: (res) => {
 						this.trainCredit = res.data.data.credit
-					}
+					},
+					
 				})
 			},
 
