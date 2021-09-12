@@ -97,7 +97,6 @@
 		},
 		mounted() {
 			this.getTrainType();
-			this.getUserScore()
 		},
 
 		onShow() {
@@ -110,25 +109,6 @@
 			}
 		},
 		methods: {
-			/**
-			 * 获取积分
-			 * 需要获取对应的token值
-			 */
-			getUserScore() {
-				//发送ajax请求
-			console.log("把分数的数据从其他界面传递过来")
-			this.tokenValue = uni.getStorageSync('token');
-			uni.request({
-				url:'https://zhaodigroup.cn/admin/api/trainUserCredit/getTrainUserCreditByUserId',
-				header:{
-					'X-Token':this.tokenValue
-				},
-				success(res) {
-					 uni.setStorageSync('trainCredit', res.data.data.credit);
-				}
-			})
-			},
-			
 			/**
 		 修改选中:我的课程和学习专区
 		*/

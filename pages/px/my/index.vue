@@ -46,7 +46,6 @@
 					marginLeft: '10rpx',
 					fontSize: '32rpx'
 				},
-				credit: 0,
 				gridList: [{
 					icon: 'zhishiwenda',
 					name: '我的提问',
@@ -64,9 +63,7 @@
 					badgeCount: 0
 				}],
 				menu: uni.getStorageSync('menu'),
-				// avatar: uni.getStorageSync('avatar'), // 头像
-				// lastName: uni.getStorageSync('lastName'), //名字
-				trainCredit: uni.getStorageSync('trainCredit'),
+				trainCredit: 0,
 				showUpdateFlag: {
 					flag: false
 				},
@@ -85,7 +82,9 @@
 		},
 		onLoad() {
 			this.getVersion()
-			// this.queryUserCreditByUserIdOn()
+		},
+		onShow() {
+			this.queryUserCreditByUserIdOn()
 		},
 		methods: {
 			/**
@@ -94,8 +93,7 @@
 			 * @return: 用户学分
 			 * @author: yzb
 			 */
-			/* queryUserCreditByUserIdOn() {
-				console.log("把分数的数据从其他界面传递过来")
+			queryUserCreditByUserIdOn() {
 				this.tokenValue = uni.getStorageSync('token');
 				uni.request({
 					url:'https://zhaodigroup.cn/admin/api/trainUserCredit/getTrainUserCreditByUserId',
@@ -103,14 +101,10 @@
 						'X-Token':this.tokenValue
 					},
 					success(res) {
-						console.log("获取数据:",res.data)
-						console.log("获取数据:",res.data.data.id)
-						console.log("获取数据:",res.data.data.credit)
-						this.trainScore = res.data.data.credit	
+						this.trainCredit = res.data.data.credit
 					}
 				})
-
-			}, */
+			},
 
 			goCellItem(item) {
 				if (item.url) {
