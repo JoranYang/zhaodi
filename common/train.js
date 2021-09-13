@@ -24,7 +24,7 @@ const URL = {
 	/**
 	 * @description 观看视频标记
 	 */
-	TRAIN_LEARN: '/train/addTrainUserStudy',
+	TRAIN_LEARN: 'train/addTrainUserStudy',
 
 	/**
 	 * @description 用户学习日志

@@ -132,6 +132,12 @@ instance.interceptors.response.use(
 				content: '服务器在开小差',
 				showCancel: false
 			})
+		} else if (error.response.status === 403) {
+			uni.showModal({
+				title: '温馨提示',
+				content: '权限不足,请与管理员联系!',
+				showCancel: false
+			})
 		} else {
 			uni.showModal({
 				title: '温馨提示',
